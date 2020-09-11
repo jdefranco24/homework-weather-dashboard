@@ -4,5 +4,22 @@ h1 {
 }
 
 .jumbotron {
-    background: gray;
+    background: forestgreen;
+    border: black;
+    border-style: solid;
+}
+
+nav {
+    float: left;
+    width: 30%;
+    height: 300px;
+    background: #ccc;
+    padding: 10px;
+    border: black;
+    border-style: solid;
+    
+}
+
+button {
+    margin-top: 2.5%;
 }
