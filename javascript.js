@@ -37,10 +37,28 @@ if (storedSearches !== null) {
     }
 console.log(citySearches)
     // Render cities to the DOM
-// renderTodos();
+renderCitySearches();
 }
 function storedSearches() {
     // local storage can only save strings   --> JSON Stringify converts to a string
-    
+
     localStorage.setItem("citySearches", JSON.stringify(citySearches));
+}
+
+function renderCitySearches() {
+    // Clear todoList element and update todoCountSpan
+    citySearches.innerHTML = "";
+    cityCountSpan.textContent = citySearches.length;
+
+    // Render a new li for each todo
+    for (var i = 0; i < citySearches.length; i++) {
+        var citySearches = citySearch[i];
+
+        var li = document.createElement("li");
+        li.textContent = citySearches;
+        li.setAttribute("data-index", i);
+
+        li.appendChild(button);
+        citySearches.appendChild(li);
+    }
 }

@@ -1,12 +1,14 @@
 h1 {
     text-align: center;
-    color: white;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .jumbotron {
-    background: forestgreen;
+    background: lightblue;
     border: black;
     border-style: solid;
+    
 }
 
 nav {
