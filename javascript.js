@@ -32,17 +32,17 @@ $("#searchBtn").on("click", function() {
     })
     .then(function (response){
 
-    console.log(response)
+    // console.log(response)
 
-    console.log(response.name)
-    console.log(response.weather[0].icon)
+    // console.log(response.name)
+    // console.log(response.weather[0].icon)
 
     let tempF = (response.main.temp - 273.15) * 1.80 + 32;
-    console.log(Math.floor(tempF))
+    // console.log(Math.floor(tempF))
 
-    console.log(response.main.humidity)
+    // console.log(response.main.humidity)
 
-    console.log(response.wind.speed)
+    // console.log(response.wind.speed)
 
     getCurrentConditions(response);
     getCurrentForecast(response);
@@ -89,8 +89,8 @@ function getCurrentForecast () {
     method: "GET"
     }).then(function (response){
 
-    console.log(response)
-    console.log(response.dt)
+    // console.log(response)
+    // console.log(response.dt)
     $('#forecast').empty();
 
     // variable to hold response.list
@@ -105,8 +105,8 @@ function getCurrentForecast () {
 
         let day = Number(results[i].dt_txt.split('-')[2].split(' ')[0]);
         let hour = results[i].dt_txt.split('-')[2].split(' ')[1];
-        console.log(day);
-        console.log(hour);
+        // console.log(day);
+        // console.log(hour);
 
         if(results[i].dt_txt.indexOf("12:00:00") !== -1){
         
